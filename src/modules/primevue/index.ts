@@ -144,7 +144,7 @@ export default defineNuxtModule<PrimeVueOptions>({
     );
 
     addImports(
-      { from: 'primevue/config', name: 'usePrimeVue' }
+      { from: resolve('./runtime/config'), name: 'usePrimeVue' }
     );
 
     addPluginTemplate(normalizeTemplate({

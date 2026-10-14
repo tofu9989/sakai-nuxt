@@ -1,6 +1,7 @@
 {
   "name": "sakai-nuxt",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "nuxi dev",
     "build": "NITRO_PRESET=vercel nuxi build",
@@ -12,62 +13,44 @@
     "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
-    "pinia": "^2.1.7"
+    "pinia": "^4.0.3"
   },
   "devDependencies": {
-    "@nuxt/test-utils": "^3.8.1",
-    "@nuxtjs/google-fonts": "^3.0.1",
-    "@pinia/nuxt": "^0.5.1",
-    "@pinia/testing": "^0.1.3",
-    "@testing-library/vue": "latest",
-    "@types/node": "^20.10.0",
-    "@types/serialize-javascript": "^5.0.2",
-    "@vite-pwa/nuxt": "^0.3.0",
-    "@vueuse/components": "^10.6.1",
-    "@vueuse/core": "^10.6.1",
-    "@vueuse/nuxt": "^10.6.1",
+    "@nuxt/icon": "^2.5.1",
+    "@nuxt/test-utils": "^4.3.3",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@pinia/nuxt": "^1.0.2",
+    "@pinia/testing": "^2.0.1",
+    "@testing-library/vue": "^8.1.0",
+    "@types/node": "^24.19.2",
+    "@types/serialize-javascript": "^5.0.4",
+    "@vite-pwa/nuxt": "^1.1.1",
+    "@vue/test-utils": "^2.5.1",
+    "@vueuse/components": "^15.0.0",
+    "@vueuse/core": "^15.0.0",
+    "@vueuse/nuxt": "^15.0.0",
     "@whoj/eslint-config": "^1.5.0",
-    "@whoj/utils": "^1.8.0",
-    "chart.js": "^4.4.0",
-    "core-js": "^3.31.0",
-    "eslint": "^8.54.0",
-    "nuxt": "^3.8.2",
-    "nuxt-icon": "^0.6.6",
+    "@whoj/utils": "^2.4.0",
+    "chart.js": "^4.5.1",
+    "core-js": "^3.50.0",
+    "eslint": "^8.57.1",
+    "nuxt": "^4.6.1",
     "primeflex": "^3.3.1",
     "primeicons": "^6.0.1",
-    "primevue": "^3.41.1",
-    "prismjs": "^1.29.0",
-    "sass": "^1.69.5",
-    "typescript": "^5.3.2",
-    "vitest": "^0.34.6"
+    "primevue": "^3.53.1",
+    "prismjs": "^1.30.0",
+    "sass": "^1.105.1",
+    "serialize-javascript": "^7.1.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
   },
-  "pnpm": {
-    "allowedDeprecatedVersions": {
-      "stable": "*",
-      "rollup-plugin-terser": "*"
-    },
-    "overrides": {
-      "core-js": "$core-js",
-      "sourcemap-codec": "npm:@jridgewell/sourcemap-codec@latest"
-    },
-    "peerDependencyRules": {
-      "allowAny": [
-        "rollup",
-        "vitest",
-        "primeicons"
-      ]
-    }
-  },
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@12.11.2",
   "engines": {
-    "node": ">=18"
+    "node": ">=22.22.3"
   },
   "homepage": "https://github.com/who-jonson/sakai-nuxt#readme",
   "repository": {
     "url": "https://github.com/who-jonson/sakai-nuxt",
     "type": "git"
-  },
-  "bugs": {
-    "url": "https://github.com/who-jonson/sakai-nuxt/issues"
   }
 }

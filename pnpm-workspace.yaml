@@ -1,0 +1,27 @@
+# pnpm reads project settings from this file, not package.json.
+# See https://pnpm.io/settings
+
+shamefullyHoist: true
+strictPeerDependencies: false
+
+catalog:
+  core-js: '^3.50.0'
+
+overrides:
+  core-js: 'catalog:'
+  sourcemap-codec: npm:@jridgewell/sourcemap-codec@latest
+
+peerDependencyRules:
+  allowAny:
+    - rollup
+    - vitest
+    - primeicons
+
+allowedDeprecatedVersions:
+  stable: '*'
+  rollup-plugin-terser: '*'
+
+allowBuilds:
+  '@parcel/watcher': true
+  core-js: true
+  esbuild: true

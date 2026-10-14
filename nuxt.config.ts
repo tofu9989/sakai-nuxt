@@ -41,15 +41,8 @@ export default defineNuxtConfig({
     '~/assets/demo/flags/flags.css'
   ],
 
-  dir: {
-    public: '../public/'
-  },
-
   experimental: {
-    asyncContext: true,
-    headNext: true,
-    typedPages: true,
-    typescriptBundlerResolution: true
+    typedPages: true
   },
 
   // @ts-ignore
@@ -59,15 +52,8 @@ export default defineNuxtConfig({
     }
   },
 
-  imports: {
-    autoImport: true,
-    addons: {
-      vueTemplate: true
-    }
-  },
-
   modules: [
-    'nuxt-icon',
+    '@nuxt/icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt',
@@ -78,10 +64,6 @@ export default defineNuxtConfig({
   nitro: {
     experimental: {
       asyncContext: true
-    },
-
-    future: {
-      nativeSWR: true
     }
   },
 
@@ -93,16 +75,22 @@ export default defineNuxtConfig({
 
   srcDir: 'src/',
 
-  typescript: {
-    shim: false
-  },
-
   vite: {
     build: {
       sourcemap: false
     },
     clearScreen: true,
-    logLevel: 'info'
+    logLevel: 'info',
+    vue: {
+      template: {
+        transformAssetUrls: {
+          // Nuxt's public/ assets are referenced as absolute `/images/...` URLs.
+          // @vitejs/plugin-vue >=6 defaults includeAbsolute to true, which rewrites
+          // those into module imports resolved against srcDir. Keep them as URLs.
+          includeAbsolute: false
+        }
+      }
+    }
   },
 
   pwa: {
